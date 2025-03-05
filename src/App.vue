@@ -30,7 +30,7 @@ export default defineComponent({
       error.value = null; // Nollställ felet vid ny förfrågan
       try {
         const response = await axios.get<JokeValue>(
-          "http://jokes.ubk3s/api/jokes/random"
+          "http://joke-spring.ubk3s/api/jokes/random"
         );
         joke.value = response.data; // Uppdatera skämtet med resultatet
       } catch (err) {
